@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>赏李清照——半世烟雨，半世桃花</title>
+	</head>
+	<style type="text/css">
+		html {
+		background-image:url(img/bg1.jpg);
+		background-size:100%;
+		}
+		body {
+    		margin: 0;
+		}
+		.tit{
+			position:absolute;
+            width: 100%;
+            height: 100%;
+            /*margin-left: 18%;
+            margin-top: 10%;*/
+        }
+       .title1{
+        	position:absolute;
+            width: 35%;
+            /*height: 20%;*/
+            margin-left: 50%;
+            margin-top: 13%;
+            /*text-align: center;*/
+            /*cursor: pointer;*/
+        }
+        .title2{
+        	position:absolute;
+            width: 60%;
+            /*height: 50%;*/
+            margin-left: 40%;
+            margin-top: 25%;
+            /*text-align: center;*/
+            /*cursor: pointer;*/
+        }
+
+        .lqz{
+        	position:absolute;
+            width: 25%;
+            /*height: 70%;*/
+            margin-left: 10%;
+            margin-top: 10%;
+            /*text-align: center;*/
+        }
+        .next{
+        	position:absolute;
+            width:100%;
+            /*height: 70%;*/
+            margin-left: 77%;
+            margin-top: 40%;
+            /*text-align: center;*/
+        }
+        .next img{
+        	width:17%;
+        }
+		.next :hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
+	</style>
+	<body>
+		<div class="next">
+			<img src="img/next.png" onclick="jump()">
+		</div>
+		<script>
+    		function jump() {
+        	window.location.href='menu.html';
+    	}
+</script>
+		<!--<div class="tit">-->
+    		<img src="img/lqz.webp" class="lqz">   	
+    		<img src="img/title1.png" class="title1">
+    		<img src="img/title2.png" class="title2">
+		<!--</div>-->		
+	</body>
+</html>
