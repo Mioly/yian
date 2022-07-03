@@ -1,0 +1,28 @@
+h3{font-size: 40px; font-weight: normal; color: #8B0A50;margin: 15px 0 10px; padding-top: 35px; text-align: center;font-family: "楷体";}
+p{margin-bottom: 10px; font-size: 30px; color:#8B658B; font-family: "楷体";}
+html{
+	background-image: url(../img/background.jpg);
+	background-size: 100%;
+}
+#all{
+	position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 900px;
+    margin: 50px auto;
+    /*background-color: greenyellow;*/
+}
+.video{
+	width: 50%;
+	
+}
+.info{
+	
+	width: 50%;
+}
+.infom{
+	padding:10% 20%;
+	opacity: 0.9;
+	background-image: url(../img/info.jpg);
+}
