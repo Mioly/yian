@@ -1,0 +1,77 @@
+h3{font-size: 50px; font-weight: normal; color: #8B0A50;  text-align: center;font-family: "楷体";}
+p{margin-bottom: 10px; font-size: 25px; color:#8B658B; font-family: "楷体"; line-height: 40px;}
+h2{font-size: 50px; font-weight: normal; color: #000000;  text-align: right;font-family: "华文行楷";}
+html{
+	background-image: url(../img/background.jpg);
+	
+	/*background-size: 100%;*/
+	background-repeat:no-repeat;
+}
+#all{
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 900px;
+    margin: 50px auto;
+    /*background-color: greenyellow;*/
+}
+#all1{
+	display: flex;
+    flex-direction: column;
+}
+#all2{
+	display: flex;
+    flex-direction: row;
+}
+.video{
+	width: 50%;
+	border-radius: 40px;
+	display: flex;
+    flex-direction: column;
+	/*margin: 50px 50px;*/
+	/*padding: 80px;*/
+}
+.info{
+	border-radius: 40px;
+	width: 50%;
+	background-color: antiquewhite;
+	opacity: 0.8;
+}
+.infom{
+	padding:;
+	/*opacity: 0.8;*/
+	/*background-image: url(../img/info.jpg);*/
+	/*background-color: antiquewhite;*/
+}
+.heng{
+	display: flex;
+    flex-direction: row;
+}
+#zhan{
+	/*height: 0px;*/
+}
+#zhan1{
+	width:20%;
+}
+
+.next2{
+	padding:;
+	display: flex;
+	flex-direction:  row-reverse;
+	width: 100%;
+	text-align: right;
+}
+a{
+ text-decoration: none;
+ }
+ a:link {
+ 	color:#000000;
+ 	}
+ a:visited {
+ 	color:#000000;
+ 	}
+ .next2 :hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
