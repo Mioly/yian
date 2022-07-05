@@ -11,37 +11,39 @@
 			background-repeat:no-repeat;
 		}
 		
-		body {
-    		margin: 0;   		
-			
-		}
-		#all{
-		    width: 1500px;
+		.all{
+			position: relative;
+			display: flex;
+    		flex-direction: row;
+		    /*width: 1500px;*/
+		    width: 80%;
 		    margin: 50px auto;
+		}
+		#con{
+			display: flex;
+			margin-top: 5%;
 		}
 		.container{
 			position: relative;
-		    height: 600px;
-		    width: 100%;
+			display: flex;
+    		flex-direction: column;
+		    width: 60%;
 		}
         .renwu{
-        	/*width: 30%;*/
-        	position:absolute;
+        	width: 50%;
+        	
+        	/*position:absolute;*/
             margin-left: 0%;
-            margin-top: 13%;
+            margin-top: 40%;
         }
         .title{
-        	position:absolute;
-            width:200px;
+            width:50%;
             margin-left: 64%;
-            margin-top: -3%;
             /*cursor:pointer;*/
         }
         .next{
-        	position:absolute;
             width:200px;
             margin-left: 80%;
-            margin-top: 47%;
             cursor:pointer;
         }
 		.next :hover{
@@ -51,24 +53,25 @@
 
 	</style>
 	<body>
-		<div id="all">
-			<div class="container">
+		<div class="all">
+				<div id="con">
 				<div class="renwu">
-					<img src="img/renwu.png" alt="photo" width="550px">
+					<img src="img/renwu.png" alt="photo" >
 				</div>
+				</div>
+			<div class="container">
 				<div class="title">
-					<img src="img/title.png" alt="photo" >
+					<img src="img/title1.png" alt="photo" >
 				</div>
 				<div class="next">
-					<img src="img/menu.png" onclick="jump()" width="350px">
-				</div>
-				<script>
-		    		function jump() {
-		        	window.location.href='menu.html';
-		    		}
-				</script>
+					<img src="img/menu1.png" onclick="jump()" width="350px">
+					</div>
 			</div>
 		</div>
+		<script>
+		    function jump() {
+		        window.location.href='menu.html';
+		    }
+		</script>
 	</body>
 </html>
-
