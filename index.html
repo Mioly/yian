@@ -6,7 +6,7 @@
 	</head>
 	<style type="text/css">
 		html {
-			background-image: url("img/bg3.jpg");
+			background-image: url("img/bg.jpg");
 			/*background-size: 100%;*/
 			background-repeat:no-repeat;
 		}
@@ -21,29 +21,22 @@
 		}
 		#con{
 			display: flex;
-			margin-top: 5%;
+			width: 50%;
 		}
 		.container{
 			position: relative;
 			display: flex;
     		flex-direction: column;
-		    width: 60%;
+		    width: 50%;
 		}
-        .renwu{
-        	width: 50%;
-        	
-        	/*position:absolute;*/
-            margin-left: 0%;
-            margin-top: 40%;
-        }
         .title{
             width:50%;
-            margin-left: 64%;
+            margin-left: 40%;
             /*cursor:pointer;*/
         }
         .next{
             width:200px;
-            margin-left: 80%;
+            margin-left: 45%;
             cursor:pointer;
         }
 		.next :hover{
@@ -55,16 +48,16 @@
 	<body>
 		<div class="all">
 				<div id="con">
-				<div class="renwu">
+				<!--<div class="renwu">
 					<img src="img/renwu.png" alt="photo" >
-				</div>
+				</div>-->
 				</div>
 			<div class="container">
 				<div class="title">
-					<img src="img/title1.png" alt="photo" >
+					<img src="img/title1.png"  >
 				</div>
 				<div class="next">
-					<img src="img/menu1.png" onclick="jump()" width="350px">
+					<img src="img/nex.png" onclick="jump()" width="350px">
 					</div>
 			</div>
 		</div>

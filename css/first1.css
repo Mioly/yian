@@ -11,3 +11,15 @@ html{
 	background-color: wheat;
 	opacity: 0.8;
 }
+
+#next4{
+	display: flex;
+	flex-direction:  row-reverse;
+	width: 100%;
+	margin-top: 20%;
+	text-align: right;
+}
+#next4 :hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
