@@ -1,0 +1,25 @@
+h3{font-size: 40px; font-weight: normal; color: #8B0A50;  text-align: center;font-family: "楷体";}
+p{text-align:center;margin-bottom: 10px; font-size: 25px; color:#8B658B; font-family: "楷体"; line-height: 40px;}
+html{
+	background-image: url(../img/background.jpg);
+	
+	/*background-size: 100%;*/
+	background-repeat:no-repeat;
+}
+
+#all{
+	background-color: wheat;
+	opacity: 0.8;
+}
+
+#next4{
+	display: flex;
+	flex-direction:  row-reverse;
+	width: 100%;
+	margin-top: 20%;
+	text-align: right;
+}
+#next4 :hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
