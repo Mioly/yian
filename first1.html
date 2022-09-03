@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>如梦令</title>
+		<link rel="stylesheet" type="text/css" href="css/first1.css" />
+		<script src="./js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+
+     $(function(){                  var i=0;
+                  //将第一张复制
+                  var clone=$(".banner .img li").first().clone();
+                  //然后粘贴
+                  $(".banner .img").append(clone);
+                  //size()被length取代
+                 var size=$(".banner .img li").length;
+                 for(var j=0;j<size-1;j++){
+                     $(".banner .num").append("<li></li>");
+                 }
+                 $(".banner .num li").first().addClass("on");
+                 //鼠标划入圆点
+                 $(".banner .num li").hover(function(){
+                     //获取当前元素的索引值
+                     var index=$(this).index();
+                     i=index;
+                     $(".banner .img").stop().animate({left:-index*690},500)
+                     $(this).addClass("on").siblings().removeClass("on");
+                 })
+                 //自动轮播
+                 var t=setInterval(
+                     moverl,200000)
+                 //鼠标移入定时器被关闭
+                 $(".banner").hover(function(){
+                     clearInterval(t);
+                 },function(){
+                     t=setInterval(moverl,2000)
+                 })
+                 //向左的按钮点击事件
+                 $(".banner .btn_left").click(function(){
+                     moverl();
+                 })
+                 //封装函数
+                 function moverl(){
+                     i++;
+                     if(i==size){
+                         $(".banner .img").css({left:0});
+                         i=1;
+                     }
+                     $(".banner .img").stop().animate({left:-i*690},500)
+                     if(i==size-1){
+                         $(".banner .num li").eq(0).addClass("on").siblings().removeClass("on");
+                     }else{
+                         $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+                     }
+
+                     
+                     
+                 }
+                 
+                 $(".banner .btn_right").click(function(){
+                     moverr();
+                 })
+                 function moverr(){
+                    i--;
+                     if(i==-1){
+                         //索引从0开始
+                         $(".banner .img").css({left:-(size-1)*690});
+                         i=size-2;
+                     }
+                     $(".banner .img").stop().animate({left:-i*690},500)
+                    $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+                 }
+            })
+		</script>
+	</head>
+	<body>
+		<div id="all">
+			<div class="shi">
+				<img src="img/shi0.png" />
+				<div class="ci">
+					<h3>如梦令</h3>
+					<p>昨夜雨疏风骤，浓睡不消残酒。</p>
+					<p>试问卷帘人，却道海棠依旧。</p>
+					<p>知否，知否！应是绿肥红瘦。</p>
+				</div>
+			</div>
+			<div class="extra">
+				<div class="banner">
+
+　　　　			<ul class="img">
+
+　　　　　　		<li><div class="annotation">
+					<h2><br><br>注释：</h2>
+					<h5>1、疏：指稀疏。</h5>
+					<h5>2、卷帘人：有学者认为此指侍女。</h5>
+					<h5>3、绿肥红瘦：绿叶繁茂，红花凋零。</h5>
+					<h5>4、浓睡不消残酒：虽然睡了一夜，仍有余醉未消。</h5>
+					<h5> &nbsp;&nbsp;  浓睡：酣睡
+					        残酒：尚未消散的醉意。</h5>
+					<h5>5、雨疏风骤：雨点稀疏，晚风急猛。</h5>
+					</div>
+
+　　　　　　		<li><div class="annotation1">
+					<h2><br><br>翻译：</h2>
+					<h5>昨天夜里雨虽然下得稀疏，但风却刮得很大很急，</h5>
+					<h5>沉沉的酣睡却不能把残存的酒力全部消尽。</h5>
+					<h5>问那正在卷帘的侍女：庭园里的海棠现在怎么样了？</h5>
+					<h5>侍女答道：海棠和昨天一样。</h5>
+					<h5>唉，你可知道，你可知道，这个时节应该是绿叶繁茂红花凋零了。</h5>
+					</div>
+
+　　　　　　		<li><div class="annotation2">
+					<h2><br><br>赏析：</h2>
+					<h5> &nbsp;&nbsp;&nbsp;&nbsp;李清照虽然不是一位高产诗集的作家，其词流传至今的只不过</h5>
+					<h5>四五十首，但是却“无一首不工”,“为词家一大宗矣”。如这首</h5>
+					<h5>《如梦令》便是一首＂天下称之的不朽名篇。这首小令，有人物，</h5>
+					<h5>有场景，还有对白，充分地显示了宋词的语言表现力和词人的才华。</h5>
+					<h5>小词借叙酒醒后询问花事的描写，曲折委婉地表达了词人的惜花伤春</h5>
+					<h5>之情，更惜自己那逝去的青春年华，语言清新，词意隽永，令人玩</h5>
+					<h5>味不已。</h5>
+					</div>
+				</ul>
+				<ul class="num"></ul>
+ 				<div class="btn btn_left">&lt</div>
+            	<div class="btn btn_right">&gt</div>
+
+　　				</div>
+				<div class="next3">
+					<a href="first2.html">
+						<img src="img/nex4.png" /> 
+					</a>
+				</div>
+			
+			</div>
+		</div>
+		
+	</body>
+</html>

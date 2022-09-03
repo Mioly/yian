@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>赏李清照——半生烟雨，半世桃花</title>
+	</head>
+	<style type="text/css">
+		html{
+			width: 1300px;
+			height: 600px;
+			 margin: auto auto;
+		}
+		body{
+			background-image: url("img/bg.jpg");
+			/*background-size: 100%;*/
+			background-repeat:no-repeat;
+			background-size: 100% ;
+			 margin: 50px auto;
+		}
+		
+		.all{
+			position: relative;
+			display: flex;
+    		flex-direction: row;
+		    /*width: 1500px;*/
+		    width: 80%;
+		    margin: 50px auto;
+		}
+		#con{
+			display: flex;
+			width: 50%;
+		}
+		.container{
+			position: relative;
+			display: flex;
+    		flex-direction: column;
+		    width: 50%;
+		}
+        .next{
+            width:100px;
+            margin-left: 70%;
+            cursor:pointer;
+            margin-top: 420px;
+        }
+		.next :hover{
+            transform: scale(1.1,1.1);
+            transition: 2s;
+        }
+
+	</style>
+	<body>
+		<div class="all">
+				<div id="con">
+				<!--<div class="renwu">
+					<img src="img/renwu.png" alt="photo" >
+				</div>-->
+				</div>
+			<div class="container">
+				<!--<div class="title">
+					<img src="img/title1.png"  >
+				</div>-->
+				<div class="next">
+					<img src="img/nex.png" onclick="jump()" width="220px">
+					</div>
+			</div>
+		</div>
+		<script>
+		    function jump() {
+		        window.location.href='menu.html';
+		    }
+		</script>
+	</body>
+</html>

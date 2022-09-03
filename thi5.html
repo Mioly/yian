@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>课后小测验</title>
+	</head>
+<style type="text/css">
+	
+	html{
+			width: 1300px;
+			height: 600px;
+			 margin: auto auto;
+	}
+	body{
+			background-image: url("img/background.jpg");
+			/*background-size: 100%;*/
+			background-repeat:no-repeat;
+			background-size: 100% ;
+			 margin: 50px auto;
+	}
+		
+	.ren{
+		position: relative;
+		top:322px;
+		left:10px;
+		width: 322px;
+		height: 250px;
+	}
+
+	.ee{
+		position: relative;
+		background-size: cover;
+		margin: 0 auto;
+		width: 700px;
+		height: 400px;
+		opacity: 0.8;
+		top: -250px;
+		left: 250px;
+	}
+	
+	.dd img{
+		background-repeat: repeat-x;
+		width: 700px;
+		height: 560px;
+		/*opacity: 0.8;*/
+		background-size: cover;
+		
+	}	
+	#timu{
+		position: absolute;
+		top:150px;
+		left:80px;
+		width: 580px;
+		height: 250px;
+		font-family: 华文隶书;
+		line-height: 30px;
+	}
+	#timu ul{
+		font-size: 18pt;
+		
+	}
+	#tijiao1{
+		position: absolute;
+		top:300px;
+		left:210px;
+		width: 440px;
+		height: 40px;
+		font-size: 18pt;
+		font-weight: bolder;
+		font-family: 幼圆;
+		/*background-color:#F7A04B;*/
+		background-color:#B4A57C;
+		color:#050303;
+		border-radius: 5px;
+	}
+	#tijiao1:hover{
+		width: 442px;
+		height: 42px;
+	}
+	#tijiao2{
+		position: absolute;
+		top:350px;
+		left:210px;
+		width: 440px;
+		height: 40px;
+		font-size: 18pt;
+		font-weight: bolder;
+		font-family: 幼圆;
+		/*background-color:#F7A04B;*/
+		background-color:#B4A57C;
+		color:#050303;
+		border-radius: 5px;
+	}
+	#tijiao2:hover{
+		width: 442px;
+		height: 42px;
+	}
+
+</style>
+	
+	<body>
+		<div class="ren">
+			<img src="img/renwu.png" alt="photo" width="300px" height="360px" id="renw" >
+		</div>
+		<div class="ee" >
+			<div class="dd">
+				<img src="img/shi0.png" />
+			</div>
+			<div id="timu">
+				<h2>李清照：是花也是我，答对了，最后一个问题，李煜写愁时说“问君能有几多愁？恰似一江春水向东流。”，我却不说愁之无尽，你知道我是如何说的吗？</h2>
+			</div>
+			<input type="button" value="这次第，怎一个愁字了得！" name="submit" id="tijiao1" onClick="jump1()">
+			<input type="button" value="三杯两盏淡酒，怎敌他、晚来风急！" name="submit" id="tijiao2" onClick="jump2()">
+		</div>
+		<script>
+		    function jump1() {
+		        window.location.href='thi6.html';
+		    }
+		    function jump2() {
+		        window.location.href='thi7.html';
+		    }
+		</script>
+	</body>
+</html>

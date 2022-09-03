@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一剪梅</title>
+		<link rel="stylesheet" type="text/css" href="css/second1.css" />
+		<script src="./js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+
+     $(function(){                  var i=0;
+                  //将第一张复制
+                  var clone=$(".banner .img li").first().clone();
+                  //然后粘贴
+                  $(".banner .img").append(clone);
+                  //size()被length取代
+                 var size=$(".banner .img li").length;
+                 for(var j=0;j<size-1;j++){
+                     $(".banner .num").append("<li></li>");
+                 }
+                 $(".banner .num li").first().addClass("on");
+                 //鼠标划入圆点
+                 $(".banner .num li").hover(function(){
+                     //获取当前元素的索引值
+                     var index=$(this).index();
+                     i=index;
+                     $(".banner .img").stop().animate({left:-index*690},500)
+                     $(this).addClass("on").siblings().removeClass("on");
+                 })
+                 //自动轮播
+                 var t=setInterval(
+                     moverl,200000)
+                 //鼠标移入定时器被关闭
+                 $(".banner").hover(function(){
+                     clearInterval(t);
+                 },function(){
+                     t=setInterval(moverl,2000)
+                 })
+                 //向左的按钮点击事件
+                 $(".banner .btn_left").click(function(){
+                     moverl();
+                 })
+                 //封装函数
+                 function moverl(){
+                     i++;
+                     if(i==size){
+                         $(".banner .img").css({left:0});
+                         i=1;
+                     }
+                     $(".banner .img").stop().animate({left:-i*690},500)
+                     if(i==size-1){
+                         $(".banner .num li").eq(0).addClass("on").siblings().removeClass("on");
+                     }else{
+                         $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+                     }
+
+                     
+                     
+                 }
+                 
+                 $(".banner .btn_right").click(function(){
+                     moverr();
+                 })
+                 function moverr(){
+                    i--;
+                     if(i==-1){
+                         //索引从0开始
+                         $(".banner .img").css({left:-(size-1)*690});
+                         i=size-2;
+                     }
+                     $(".banner .img").stop().animate({left:-i*690},500)
+                    $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+                 }
+            })
+		</script>
+	</head>
+	<body>
+		<div id="all">
+			<div class="shi">
+				<img src="img/shi0.png" />
+				<div class="ci">
+					<h3>一剪梅</h3>
+			<p>红藕香残玉簟秋。轻解罗裳，独上兰舟。</p>
+			<p>云中谁寄锦书来，雁字回时，月满西楼。</p>
+			<p>花自飘零水自流。一种相思，两处闲愁。</p>
+			<p>此情无计可消除，才下眉头，却上心头。</p>
+				</div>
+			</div>
+			<div class="extra">
+				<div class="banner">
+
+　　　　			<ul class="img">
+
+　　　　　　		<li><div class="annotation">
+					<h2><br><br>注释：</h2>
+					<h5>1、玉簟秋：意谓时至深秋，精美的竹席已嫌清冷</h5>
+					<h5>2、兰舟：《述异记》卷下谓：木质坚硬而有香味的木兰树是制作舟</h5>
+					<h5>&nbsp;&nbsp;&nbsp;船的好材料，诗家遂以木兰舟或兰舟为舟之美称。</h5>
+					<h5>&nbsp;&nbsp;&nbsp;一说“兰舟”特指睡眠的床榻。</h5>
+					<h5>3、锦书：对书信的一种美称。《晋书·窦滔妻苏氏传）云：</h5>
+					<h5>&nbsp;&nbsp;&nbsp;苏蕙织锦为回文旋图诗，以赠其被徒流沙的丈夫窭滔。</h5>
+					<h5>&nbsp;&nbsp;&nbsp;这种用锦织成的字称锦字，又称锦书。</h5>
+					</div>
+
+　　　　　　		<li><div class="annotation1">
+					<h2><br><br>翻译：</h2>
+					<h5>&nbsp;&nbsp;&nbsp;&nbsp;红藕香残，鲜艳的荷花凋谢了，从竹席上感到深深的凉意，</h5>
+					<h5>轻轻提起薄纱罗裙，独自泛一叶兰舟。天空中燕群排成队形飞回来，</h5>
+					<h5>（有没有）传回谁的家书？鸿雁飞回的时候，（转眼间）已是夜晚，</h5>
+					<h5>如洗的月光倾泻在西楼，（我在这盼望着）。花，自在地飘零裡水，</h5>
+					<h5>自在地飘流，一种离别的相思，你与我，牵动起两处的闲愁。啊，</h5>
+					<h5>无法排除的是这相思，这离愁，刚从微蹙的眉间消失，又隐隐缠绕</h5>
+					<h5>上了心头。</h5>
+					</div>
+
+　　　　　　		<li><div class="annotation2">
+					<h2><br><br>赏析：</h2>
+					<h5> &nbsp;&nbsp;&nbsp;&nbsp;这是一首倾诉相思、别愁之苦的词。这首词在黄昇《花庵词选》</h5>
+					<h5>中题作“别愁”，是李清照写给新婚未久即离家的丈夫赵明诚的，</h5>
+					<h5>她诉说了自己独居生活的孤独寂寞，急切思念丈夫早日归来的心情。</h5>
+					<h5>伊世珍《琅嬛记》说：“易安结褵（婚）未久，明诚即负笈远游。</h5>
+					<h5>易安殊不忍别，觅锦帕书《一剪梅》词以送之。”</h5>
+					<h5>&nbsp;&nbsp;&nbsp;&nbsp;作者在词中以女性特有的敏感捕捉稍纵即逝的真切感受，</h5>
+					<h5>将抽象而不易捉摸的思想感情，以素淡的语言表现出具体可感、</h5>
+					<h5>为人理解。</h5>
+					</div>
+				</ul>
+				<ul class="num"></ul>
+ 				<div class="btn btn_left">&lt</div>
+            	<div class="btn btn_right">&gt</div>
+
+　　				</div>
+				<div class="next3">
+					<a href="sec1.html">
+					<img src="img/nex4.png" /> 
+					</a>
+				</div>
+			
+			</div>
+		</div>
+		
+	</body>
+</html>
